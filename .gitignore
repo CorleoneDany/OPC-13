@@ -4,4 +4,4 @@
 *.sqlite3
 .DS_Store
 *.old
-launch.json
+launch.json.venv

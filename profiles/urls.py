@@ -1,8 +1,9 @@
-import views as profile_views
+from . import views as profile_views
 from django.urls import path
 
+app_name = 'profiles'
 
 urlpatterns = [
-    path('profiles/', profile_views.profiles_index, name='profiles_index'),
-    path('profiles/<str:username>/', profile_views.profile, name='profile'),
+    path('', profile_views.index, name='index'),
+    path('<str:username>/', profile_views.profile, name='profile'),
 ]
