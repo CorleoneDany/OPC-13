@@ -1,3 +1,5 @@
 .gitignore
+.git
+.vscode
 v-env.sh
 README.md

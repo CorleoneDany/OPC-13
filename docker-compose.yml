@@ -1,6 +1,7 @@
-version: '3'
+version: "3"
 services:
-  web:
+  opc13:
+    container_name: opc13
     build: .
     ports:
       - "8000:8000"
