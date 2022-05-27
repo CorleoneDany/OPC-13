@@ -45,15 +45,12 @@ jobs:
             HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release -a opc-13 $DOCKER_USER/opc_13:$CIRCLE_SHA1
 
 workflows:
-  testing:
+  main:
     jobs:
       - build-and-test
-
-  deploy:
-    jobs:
       - docker_deploy:
           requires:
-            - testing
+            - build-and-test
       - heroku_deploy:
           requires:
             - docker_deploy
