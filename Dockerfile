@@ -10,3 +10,5 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY ./ /app
+
+CMD gunicorn oc_lettings_site.wsgi:application
