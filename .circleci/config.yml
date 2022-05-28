@@ -53,6 +53,14 @@ workflows:
       - docker_deploy:
           requires:
             - build-and-test
+          filters:
+            branches:
+              only:
+                - master
       - heroku_deploy:
           requires:
             - docker_deploy
+          filters:
+            branches:
+              only:
+                - master
