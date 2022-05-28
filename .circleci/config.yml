@@ -31,6 +31,7 @@ jobs:
             docker build -t $DOCKER_USER/opc_13:$CIRCLE_SHA1 .
             docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
             docker push $DOCKER_USER/opc_13:$CIRCLE_SHA1
+            docker push $DOCKER_USER/opc_13:release
 
   heroku_deploy:
     machine: true
