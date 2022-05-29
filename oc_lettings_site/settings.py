@@ -115,7 +115,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 sentry_sdk.init(
-    dsn=config('SENTRY_DSN', default='secretdsn'),
+    dsn=config('SENTRY_DSN', default='https:secretdsn'),
     integrations=[DjangoIntegration()],
 
     # Set traces_sample_rate to 1.0 to capture 100%
