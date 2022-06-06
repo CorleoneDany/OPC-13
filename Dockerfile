@@ -13,4 +13,4 @@ COPY ./ /app
 
 EXPOSE 8000
 
-CMD ["gunicorn", "oc_lettings_site.wsgi:application"]
+CMD python manage.py runserver
