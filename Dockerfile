@@ -13,4 +13,4 @@ COPY ./ /app
 
 EXPOSE 8000
 
-CMD ["gunicorn", "-b", "127.0.0.1:8000", "oc_lettings_site.wsgi:application"]
+CMD ["gunicorn", "oc_lettings_site.wsgi:application"]
