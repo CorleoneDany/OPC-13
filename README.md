@@ -75,3 +75,15 @@ Utilisation de PowerShell, comme ci-dessus sauf :
 
 - Pour activer l'environnement virtuel, `.\venv\Scripts\Activate.ps1` 
 - Remplacer `which <my-command>` par `(Get-Command <my-command>).Path`
+
+### Docker
+
+Pour run le container il y a un fichier run_docker.sh qui téléchargera automatiquement le projet sur docker hub en tag release et le fera tourner sur votre poste.
+
+### Heroku
+
+La pipeline CircleCi s'occupe du déploiement sur Heroku en envoyant le container directement via le CLI installé sur la pipeline.
+
+### CircleCi
+
+La pipeline CircleCi est configurée dans le fichier .circleci/config.yml.
